@@ -1,31 +1,31 @@
 variable "request_s3" {
   type        = string
   default     = ""
-  description = ""
+  description = "Requester S3 Bucket name"
 }
 
 variable "request_state" {
   type        = string
   default     = ""
-  description = ""
+  description = "Requester State file name"
 }
 
 variable "accept_s3" {
   type        = string
   default     = ""
-  description = ""
+  description = "Accepter S3 Bucket name"
 }
 
 variable "accept_state" {
   type        = string
   default     = ""
-  description = ""
+  description = "Accepter State file name"
 }
 
 variable "accept_region" {
   type        = string
   default     = ""
-  description = ""
+  description = "Accepter VPC region"
 }
 
 variable "tags" {
@@ -37,5 +37,5 @@ variable "tags" {
   default = {
     Name = "Account A to Account B"
   }
-  description = ""
+  description = "PCX brief description"
 }
