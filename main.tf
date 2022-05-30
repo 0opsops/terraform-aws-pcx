@@ -30,7 +30,7 @@ locals {
 }
 
 
-## Requester side OPS VPC
+## Requester side VPC
 resource "aws_vpc_peering_connection" "request_x_accept" {
   provider      = aws.requester
   vpc_id        = local.requestnetworkstate.outputs.vpc_id.value
@@ -40,7 +40,7 @@ resource "aws_vpc_peering_connection" "request_x_accept" {
   tags          = merge(var.tags)
 }
 
-## Accepter side QA VPC
+## Accepter side VPC
 resource "aws_vpc_peering_connection_accepter" "request_x_accept" {
   provider                  = aws.accepter
   vpc_peering_connection_id = aws_vpc_peering_connection.request_x_accept.id
