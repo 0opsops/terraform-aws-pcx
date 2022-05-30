@@ -17,12 +17,12 @@ terraform {
 }
 
 provider "aws" {
-  region  = "REGION" # Replace region
+  region  = "us-east-1" # Replace region
   alias   = "request"
-  profile = "REQUESTER_PROFILE" # Replace request AWS profile
+  profile = "acc_a" # Replace request AWS profile
 }
 provider "aws" {
-  region  = "REGION" # Replace region
+  region  = "ap-southeast-1" # Replace region
   alias   = "accept"
-  profile = "ACCEPTER_PROFILE" # Replace accept AWS profile
+  profile = "acc_b" # Replace accept AWS profile
 }

@@ -1,11 +1,11 @@
-request_s3    = "REQUESTER_BUCKET_NAME"
-request_state = "REQUESTER_NETWORK_STATE_NAME.tfstate"
-accept_s3     = "ACCEPT_BUCKET_NAME"
-accept_state  = "ACCEPTER_NETWORK_STATE_NAME.tfstate"
-accept_region = "ACCEPTER_REGION"
+request_s3    = "ACC_A_BUCKET_NAME"
+request_state = "acc_a.tfstate"
+accept_s3     = "ACC_B_BUCKET_NAME"
+accept_state  = "acc_b.tfstate"
+accept_region = "ap-southeast-1"
 tags = {
-  Name         = "DEV to STG"
+  Name         = "US to SG"
   ManagedBy    = "Terraform"
-  Environment  = "Development"
+  Environment  = "Labs"
   Organization = "OopsOps"
 }
