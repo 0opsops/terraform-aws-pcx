@@ -65,16 +65,6 @@ output "public_subnets_cidr_block" {
   value       = module.vpc.public_subnets_cidr_blocks
 }
 
-output "database_subnets_cidr_block" {
-  description = "List of cidr_blocks of database subnets"
-  value       = module.vpc.database_subnets_cidr_blocks
-}
-
-output "elasticache_subnets_cidr_block" {
-  description = "List of cidr_blocks of elasticache subnets"
-  value       = module.vpc.elasticache_subnets_cidr_blocks
-}
-
 # Subnets
 output "private_subnets" {
   description = "List of IDs of private subnets"
@@ -86,26 +76,6 @@ output "public_subnets" {
   value       = module.vpc.public_subnets
 }
 
-output "database_subnets" {
-  description = "List of IDs of database subnets"
-  value       = module.vpc.database_subnets
-}
-
-output "elasticache_subnets" {
-  description = "List of IDs of elasticache subnets"
-  value       = module.vpc.elasticache_subnets
-}
-
-output "redshift_subnets" {
-  description = "List of IDs of redshift subnets"
-  value       = module.vpc.redshift_subnets
-}
-
-output "intra_subnets" {
-  description = "List of IDs of intra subnets"
-  value       = module.vpc.intra_subnets
-}
-
 # NAT gateways
 output "nat_public_ips" {
   description = "List of public Elastic IPs created for AWS NAT Gateway"
@@ -115,26 +85,6 @@ output "nat_public_ips" {
 output "natgw_ids" {
   description = "List of NAT Gateway IDs"
   value       = module.vpc.natgw_ids
-}
-
-output "database_subnet_group" {
-  description = "ID of database subnet group"
-  value       = module.vpc.database_subnet_group
-}
-
-output "database_subnet_group_name" {
-  description = "ID of database subnet group"
-  value       = module.vpc.database_subnet_group_name
-}
-
-output "elasticache_subnet_group" {
-  description = "ID of elasticache subnet group"
-  value       = module.vpc.elasticache_subnet_group
-}
-
-output "elasticache_subnet_group_name" {
-  description = "ID of elasticache subnet group"
-  value       = module.vpc.elasticache_subnet_group_name
 }
 
 data "aws_caller_identity" "current" {}
