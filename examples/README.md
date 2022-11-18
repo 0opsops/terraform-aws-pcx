@@ -33,7 +33,7 @@ cd terraform-aws-pcx/examples/vpcs
 export AWS_PROFILE=acc_a
 terraform init -backend-config=acc_a.conf -reconfigure
 terraform plan -var-file=acc_a.tfvars -out=acc_a.plan
-terraform apply acc_a.plan
+terraform apply acc_a.plan --auto-approve
 ```
 
 
@@ -44,14 +44,16 @@ cd terraform-aws-pcx/examples/vpcs
 export AWS_PROFILE=acc_b
 terraform init -backend-config=acc_b.conf -reconfigure
 terraform plan -var-file=acc_b.tfvars -out=acc_b.plan
-terraform apply acc_b.plan
+terraform apply acc_b.plan --auto-approve
 ```
 
 ### Create PCX
+#### Update _**backend "s3"**_ parameters in _**provider.tf**_ file
 > Terminal 3
 ```
 cd terraform-aws-pcx/examples/
-terraform apply
+export AWS_PROFILE=acc_a
+terraform apply --auto-approve
 ```
 ![Usage-overview](1.png "It's gonna be alright!")
 
@@ -59,22 +61,22 @@ terraform apply
 ![Ping](2.png "It's gonna be alright!")
 _____________________________________________________________________________
 ## Clean up!
-### Destroy PCX
+### Destroy PCX first (unless would be stucked destroying other resources)
 > Terminal 3
 ```
-terraform destroy
+terraform destroy --auto-approve
 ```
 
 ### Destroy ACC_B resources
 > Terminal 2
 ```
 terraform init -backend-config=acc_b.conf -reconfigure
-terraform destroy -var-file=acc_b.tfvars
+terraform destroy -var-file=acc_b.tfvars --auto-approve
 ```
 
 ### Destroy ACC_A resources
 > Terminal 1
 ```
 terraform init -backend-config=acc_a.conf -reconfigure
-terraform destroy --var-file=acc_a.tfvars
+terraform destroy --var-file=acc_a.tfvars --auto-approve
 ```

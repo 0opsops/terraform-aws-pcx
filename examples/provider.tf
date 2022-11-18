@@ -9,9 +9,9 @@ terraform {
   }
 
   backend "s3" {
-    bucket  = "S3_BUCKET"          # Replace PCX state bucket nmae
-    key     = "STATE_NAME.tfstate" # Replace PCX state file name
-    region  = "REGION"
+    bucket  = "S3_BUCKET_NAME"          # Replace PCX state bucket nmae
+    key     = "STATE_NAME.tfstate"      # Replace PCX state file name
+    region  = "REGION"                  # BUCKET REGION
     encrypt = true
   }
 }
