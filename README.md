@@ -1,3 +1,10 @@
+# AWS VPCs Peering
+
+## Support PCX in same/multi regions and same/multi accounts pre-existing VPCs
+
+## THIS MODULE FULLY DEPENDENT ON TERRAFORM STATE FILES, A `VPC` AND ITS `S3 REMOTE STATE` MUST BE IN THE SAME REGION
+
+__________________________________________________________
 ## Requirements
 
 | Name | Version |
