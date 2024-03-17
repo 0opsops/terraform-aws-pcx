@@ -2,4 +2,6 @@
 **.tfstate
 **.tfstate.*
 **.plan
+**.cer
+**.terraform.lock.hcl
 *.DS_*

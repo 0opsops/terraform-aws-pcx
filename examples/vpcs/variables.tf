@@ -6,6 +6,10 @@ variable "aws_region" {
   type        = string
   description = "Region to be deployed VPC"
 }
+variable "ec2_name" {
+  type        = string
+  description = "Name of EC2"
+}
 variable "key_name" {
   type        = string
   description = "Instance login key"

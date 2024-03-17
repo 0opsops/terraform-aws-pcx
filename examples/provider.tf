@@ -3,26 +3,26 @@ terraform {
   required_providers {
     aws = {
       source                = "hashicorp/aws"
-      version               = ">= 4.16.0"
+      version               = ">=5.41.0"
       configuration_aliases = [aws.requester, aws.accepter]
     }
   }
 
   backend "s3" {
-    bucket  = "S3_BUCKET_NAME"          # Replace PCX state bucket nmae
-    key     = "STATE_NAME.tfstate"      # Replace PCX state file name
-    region  = "REGION"                  # BUCKET REGION
+    bucket  = "eks-labs-tfstate"  # PCX state bucket name
+    key     = "us-pcx-sg.tfstate" # PCX state file name
+    region  = "us-east-1"         # BUCKET REGION for PCX state to keep
     encrypt = true
   }
 }
 
 provider "aws" {
   region  = "us-east-1" # Replace region
-  alias   = "request"
+  alias   = "requester"
   profile = "acc_a" # Replace request AWS profile
 }
 provider "aws" {
   region  = "ap-southeast-1" # Replace region
-  alias   = "accept"
+  alias   = "accepter"
   profile = "acc_b" # Replace accept AWS profile
 }

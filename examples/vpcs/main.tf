@@ -1,6 +1,6 @@
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "3.14.0"
+  version = "5.6.0"
   name    = var.vpc_name
   cidr    = var.cidr
 
@@ -41,7 +41,7 @@ data "aws_ami" "ami" {
 # Create EIP
 resource "aws_eip" "this" {
   instance = aws_instance.this.id
-  vpc      = true
+  domain   = "vpc"
   depends_on = [
     module.vpc.igw_id
   ]
@@ -68,12 +68,12 @@ resource "aws_instance" "this" {
     throughput            = 125
     delete_on_termination = true
     tags = {
-      Name = "this-ec2"
+      Name = var.ec2_name
     }
   }
 
   tags = {
-    Name = "this-ec2"
+    Name = var.ec2_name
   }
 }
 

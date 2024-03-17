@@ -1,5 +1,6 @@
 vpc_name        = "vpc-b"
 aws_region      = "ap-southeast-1"
+ec2_name        = "acc_b_instance"
 instance_type   = "t2.micro"
 key_name        = "acc_b"
 cidr            = "192.168.0.0/16"
