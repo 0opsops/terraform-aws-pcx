@@ -1,6 +1,6 @@
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "5.6.0"
+  version = "6.5.1"
   name    = var.vpc_name
   cidr    = var.cidr
 
@@ -26,7 +26,7 @@ data "aws_ami" "ami" {
   owners      = ["amazon"]
   filter {
     name   = "name"
-    values = ["amzn2-ami-hvm-*"]
+    values = ["ubuntu-pro-server/images*"]
   }
   filter {
     name   = "root-device-type"

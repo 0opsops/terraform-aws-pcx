@@ -10,14 +10,14 @@ __________________________________________________________
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= v1.1.8 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >=5.41.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >=6.0.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws.accepter"></a> [aws.accepter](#provider\_aws.accepter) | >=5.41.0 |
-| <a name="provider_aws.requester"></a> [aws.requester](#provider\_aws.requester) | >=5.41.0 |
+| <a name="provider_aws.accepter"></a> [aws.accepter](#provider\_aws.accepter) | >=6.0.0 |
+| <a name="provider_aws.requester"></a> [aws.requester](#provider\_aws.requester) | >=6.0.0 |
 
 ## Modules
 

@@ -33,7 +33,7 @@ cd terraform-aws-pcx/examples/vpcs
 export AWS_PROFILE=acc_a
 terraform init -backend-config=acc_a.conf -reconfigure
 terraform plan -var-file=acc_a.tfvars -out=acc_a.plan
-terraform apply acc_a.plan --auto-approve
+terraform apply acc_a.plan
 ```
 
 
@@ -44,7 +44,7 @@ cd terraform-aws-pcx/examples/vpcs
 export AWS_PROFILE=acc_b
 terraform init -backend-config=acc_b.conf -reconfigure
 terraform plan -var-file=acc_b.tfvars -out=acc_b.plan
-terraform apply acc_b.plan --auto-approve
+terraform apply acc_b.plan
 ```
 
 ### Create PCX
