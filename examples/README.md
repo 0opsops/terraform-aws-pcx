@@ -52,7 +52,7 @@ terraform apply acc_b.plan
 > Terminal 3
 ```
 cd terraform-aws-pcx/examples/
-export AWS_PROFILE=acc_a
+export AWS_PROFILE=acc_a       # coz account A has pcx state bucket
 terraform apply --auto-approve
 ```
 ![Usage-overview](1.png "It's gonna be alright!")

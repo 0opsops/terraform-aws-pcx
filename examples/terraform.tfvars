@@ -1,6 +1,6 @@
-request_s3    = "ACC_A_BUCKET_NAME"
+request_s3    = "acc-a-tf" # replace with your "account A" bucket name
 request_state = "acc_a.tfstate"
-accept_s3     = "ACC_B_BUCKET_NAME"
+accept_s3     = "acc-b-tf" # replace with your "account B" bucket name
 accept_state  = "acc_b.tfstate"
 accept_region = "ap-southeast-1"
 tags = {

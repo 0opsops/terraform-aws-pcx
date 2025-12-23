@@ -5,10 +5,10 @@ module "pcx" {
     aws.accepter  = aws.accepter
   }
 
-  # source        = "git::git@github.com:0opsops/terraform-aws-pcx.git?ref=v1.0.0"    ## using specific tags
   # source        = "git::git@github.com:0opsops/terraform-aws-pcx.git"
-  source        = "0opsops/pcx/aws" # Latest version will use
+  # source        = "git::git@github.com:0opsops/terraform-aws-pcx.git?ref=v1.0.0"    ## using specific tags
   # version       = "1.0.1"           # define specific version
+  source        = "0opsops/pcx/aws" # Latest version will use
   request_s3    = var.request_s3
   request_state = var.request_state
   accept_s3     = var.accept_s3
